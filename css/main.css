@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Joystix';
+    src: url('../assets/fonts/joystix\ monospace.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('../assets/fonts/Consolas.ttf') format('truetype');
+}
+
+body{
+    background-color: #0F1020;
+}
+
+h1{
+    color: #6120EE;
+}
+.joystix{
+    font-family: "Joystix", sans-serif;
+}
+
+.consolas{
+    font-size: 35px;
+    font-family: "Consolas", sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d1, .d2{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    min-width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: #2F195F;
+    
+}
+
+.d3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-basis: 100%;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: #2F195F;
+}
+
+.butao1{
+    background-color: #02F75C; /* Verde neon */
+    border: 2px solid #EF18FA; /* Borda rosa neon */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold; /* Texto mais grosso */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Bordas arredondadas */
+    transition: background-color 0.4s, color 0.4s, border 0.4s
+}
+
+.butao1:hover {
+    background-color: #EF18FA; /* Fundo rosa neon ao passar o mouse */
+    color: #02F75C; /* Texto verde neon ao passar o mouse */
+    border: 2px solid #02F75C; /* Borda verde neon ao passar o mouse */
