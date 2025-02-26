@@ -1,0 +1,4 @@
+Header & Footer Background: #2f1961
+Textos - padrão: #ef18fa
+Textos - secundários: #03f75c
+Fundo: #0f1120
