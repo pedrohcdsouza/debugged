@@ -23,12 +23,7 @@ header{
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    padding: 15px;
-}
-
-@font-face {
-    font-family: 'Consolas';
-    src: url('../assets/fonts/Consolas.ttf') format('truetype');
+    padding: 20px;
 }
 
 @font-face {
@@ -41,7 +36,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 1.8rem;
+    gap: 2rem;
     margin-bottom: 5%;
     align-items: center;
     height: 40px;
@@ -50,7 +45,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #ef18fa;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
@@ -59,11 +54,12 @@ nav a {
 
 nav a:hover {
     color: #03f75c;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .link-active {
     color: #03f75c;
+    font-size: 1.5rem
 }
 
 .logo {
@@ -128,7 +124,7 @@ footer {
 .footer-left ul li a {
     text-decoration: none;
     color: #ef18fa;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.2rem;
     line-height: 1.5;
     display: block;
@@ -142,7 +138,7 @@ footer {
 
 .footer-right h3 {
     color: #ef18fa;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1.2rem;
     margin-bottom: 5px;
 }
@@ -161,7 +157,7 @@ footer {
 .footer-right ul li a {
     text-decoration: none;
     color: #ef18fa;;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 0.8rem;
     transition: color 0.3s ease;
     display: flex;
@@ -241,7 +237,7 @@ main {
 
 .news-excerpt {
     color: white;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -252,7 +248,7 @@ main {
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 0.9rem;
 }
 
@@ -270,7 +266,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Consolas', monospace;
+    font-family: 'Roboto', monospace;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
