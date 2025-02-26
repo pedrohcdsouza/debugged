@@ -2,8 +2,7 @@ let currentPage = 0;
 const newsPerPage = 12;
 let allArticles = [];
 
-const API_URL = 'https://newsapi.org/v2/everything?q=tech&language=pt&apiKey=7899286a92104be189c9e4344d3f2b18';
-
+const API_URL = 'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=7899286a92104be189c9e4344d3f2b18';
 async function fetchNews() {
     try {
         const response = await fetch(API_URL);
