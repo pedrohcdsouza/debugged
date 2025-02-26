@@ -233,14 +233,14 @@ main {
 }
 
 .news-title {
-    color: #ef18fa;
+    color: white;
     font-family: 'Joystix', monospace;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .news-excerpt {
-    color: #ef18fa;
+    color: white;
     font-family: 'Consolas', monospace;
     font-size: 1rem;
     line-height: 1.5;
@@ -251,7 +251,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ef18fa;
+    color: white;
     font-family: 'Consolas', monospace;
     font-size: 0.9rem;
 }
@@ -266,7 +266,7 @@ main {
 .news-navigation button {
     padding: 0.8rem 1.5rem;
     background-color: #2f1961;
-    color: #ef18fa;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -276,7 +276,7 @@ main {
 }
 
 .news-navigation button:hover {
-    background-color: #ef18fa;
+    background-color: #03f75c;
     color: #2f1961;
 }
 
@@ -287,7 +287,7 @@ main {
 
 .news-navigation button:disabled:hover {
     background-color: #2f1961;
-    color: #ef18fa;
+    color: #03f75c;
 }
 
 /* Media Queries */
