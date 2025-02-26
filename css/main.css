@@ -19,11 +19,11 @@ header{
     margin: 2% auto;
     background-color:#2f1961;
     height: 12vh;
-    width: 80%;
+    width: 90%;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    padding-top: 20px;
+    padding: 15px;
 }
 
 @font-face {
@@ -112,7 +112,7 @@ footer {
     background-color: #2f1961;
     width: 100%;
     height: 15vh;
-    margin: 4% auto;
+    margin: 0 auto;
     padding: 20px 30px;
 }
 
@@ -193,12 +193,12 @@ footer {
 }
 
 main {
-    width: 80%;
+    width: 90%;
     margin: 4% auto;
     margin-top: 8%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tornando responsivo */
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .news-card {
@@ -288,4 +288,210 @@ main {
 .news-navigation button:disabled:hover {
     background-color: #2f1961;
     color: #ef18fa;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding-top: 60px; /* Espaço para o menu-icon */
+    }
+
+    main {
+        width: 95%;
+        grid-template-columns: 1fr; /* Uma coluna em tablets */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+        gap: 20px;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .news-card:nth-child(3n + 2) {
+        grid-column: auto; /* Remove o span de coluna em telas menores */
+        max-width: none;
+    }
+
+    .logo {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #2f1961;
+        padding: 80px 20px;
+        transition: 0.3s ease;
+        z-index: 999; /* Menor que o menu-icon */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3); /* Sombra ao lado */
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+        gap: 20px;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* Animação do ícone do menu */
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: auto;
+        padding: 15px 5px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .logo ul li a {
+        font-size: 1.5rem;
+    }
+
+    .news-title {
+        font-size: 1rem;
+    }
+
+    .news-excerpt {
+        font-size: 0.9rem;
+    }
+
+    .news-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    footer {
+        width: 95%;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    .footer-right ul {
+        justify-content: center;
+    }
+
+    .news-navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .news-navigation button {
+        width: 80%;
+    }
+}
+
+/* Estilo do ícone do menu */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /* Aumentando z-index */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ef18fa;
+    transition: all 0.3s ease;
+}
+
+/* Overlay escuro quando o menu está aberto */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.nav-overlay.active {
+    display: block;
 }

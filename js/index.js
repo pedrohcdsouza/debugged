@@ -99,4 +99,44 @@ function previousPage() {
     updateNavigationButtons();
 }
 
-document.addEventListener('DOMContentLoaded', fetchNews); 
+document.addEventListener('DOMContentLoaded', fetchNews);
+
+// Adicione no início do seu arquivo, após as variáveis existentes
+const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('nav');
+
+// Criar e adicionar o overlay
+const overlay = document.createElement('div');
+overlay.className = 'nav-overlay';
+document.body.appendChild(overlay);
+
+menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuIcon.classList.toggle('active');
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+// Fechar menu ao clicar no overlay
+overlay.addEventListener('click', () => {
+    menuIcon.classList.remove('active');
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+});
+
+// Fechar menu ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
+        menuIcon.classList.remove('active');
+        nav.classList.remove('active');
+    }
+}); 
