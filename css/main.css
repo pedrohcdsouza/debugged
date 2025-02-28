@@ -17,7 +17,7 @@ header{
     display: flex;
     flex-direction: column;
     margin: 2% auto;
-    background-color:#2f1961;
+    background-color:#260A37;
     height: 12vh;
     width: 90%;
     align-items: center;
@@ -44,7 +44,8 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #ef18fa;
+    color: #E4E3E5;
+    font-weight: bold;
     font-family: 'Roboto', monospace;
     font-size: 1.4rem;
     display: flex;
@@ -53,18 +54,19 @@ nav a {
 }
 
 nav a:hover {
-    color: #03f75c;
-    font-size: 1.5rem;
+    color: #E4E3E5;
+    text-decoration: underline;
 }
 
 .link-active {
-    color: #03f75c;
+    color:#E4E3E5;
+    text-decoration: underline;
     font-size: 1.5rem
 }
 
 .logo {
     position: absolute;
-    bottom: -35px;
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -87,7 +89,6 @@ nav a:hover {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-image: url('../assets/imgs/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -96,16 +97,16 @@ nav a:hover {
 
 .logo ul li a {
     text-decoration: none;
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Joystix', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #2f1961;
+    background-color: #260A37;
     width: 100%;
     height: 15vh;
     margin: 0 auto;
@@ -123,8 +124,9 @@ footer {
 
 .footer-left ul li a {
     text-decoration: none;
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Roboto', monospace;
+    font-weight: bold;
     font-size: 1.2rem;
     line-height: 1.5;
     display: block;
@@ -137,7 +139,7 @@ footer {
 }
 
 .footer-right h3 {
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Roboto', monospace;
     font-size: 1.2rem;
     margin-bottom: 5px;
@@ -156,7 +158,7 @@ footer {
 
 .footer-right ul li a {
     text-decoration: none;
-    color: #ef18fa;;
+    color: #E4E3E5;
     font-family: 'Roboto', monospace;
     font-size: 0.8rem;
     transition: color 0.3s ease;
@@ -185,7 +187,7 @@ footer {
 }
 
 .footer-right ul li a:hover {
-    color: #03f75c;
+    text-decoration: underline;
 }
 
 main {
@@ -198,7 +200,7 @@ main {
 }
 
 .news-card {
-    background-color: #2f1961;
+    background-color: #260A37;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -229,7 +231,7 @@ main {
 }
 
 .news-title {
-    color: white;
+    color:white;
     font-family: 'Joystix', monospace;
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -261,7 +263,7 @@ main {
 
 .news-navigation button {
     padding: 0.8rem 1.5rem;
-    background-color: #2f1961;
+    background-color: #260A37;
     color: white;
     border: none;
     border-radius: 5px;
@@ -272,8 +274,8 @@ main {
 }
 
 .news-navigation button:hover {
-    background-color: #03f75c;
-    color: #2f1961;
+    background-color: #e147f5;
+    color: #260A37;
 }
 
 .news-navigation button:disabled {
@@ -282,6 +284,6 @@ main {
 }
 
 .news-navigation button:disabled:hover {
-    background-color: #2f1961;
-    color: #03f75c;
+    background-color: #260A37   ;
+    color: #e147f5;
 }

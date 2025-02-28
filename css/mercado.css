@@ -8,14 +8,14 @@
 }
 
 .mercado-intro h1 {
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Joystix', monospace;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .mercado-intro p {
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Consolas', monospace;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -30,7 +30,7 @@
 }
 
 .mercado-dados h2 {
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Joystix', monospace;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -41,7 +41,7 @@
     overflow-x: auto;
     margin: 0 auto;
     max-width: 1200px;
-    background: #2f1961;
+    background: #260A37;
     border-radius: 8px;
     padding: 1rem;
 }
@@ -49,20 +49,20 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Consolas', monospace;
 }
 
 th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #ef18fa;
+    border-bottom: 1px solid #E4E3E5;
 }
 
 th {
     font-family: 'Joystix', monospace;
     font-size: 0.9rem;
-    background-color: #231347;
+    background-color: #260A37;
 }
 
 td {
@@ -77,14 +77,14 @@ tr:hover {
     flex: 1;
     min-width: 300px;
     padding: 1.5rem;
-    background: #2f1961;
+    background: #260A37;
     border-radius: 8px;
     max-height: 800px;
     overflow-y: auto;
 }
 
 .mercado-noticias h2 {
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Joystix', monospace;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -92,7 +92,7 @@ tr:hover {
 }
 
 .news-card {
-    background: #231347;
+    background: #3f105b;
     border-radius: 8px;
     margin-bottom: 1.5rem;
     overflow: hidden;
@@ -109,7 +109,7 @@ tr:hover {
 }
 
 .news-card .news-title {
-    color: #ef18fa;
+    color: #E4E3E5;
     font-family: 'Joystix', monospace;
     font-size: 0.9rem;
     margin-bottom: 0.8rem;
@@ -135,7 +135,7 @@ tr:hover {
     justify-content: space-between;
     align-items: center;
     font-size: 0.7rem;
-    color: #ef18fa;
+    color: #E4E3E5;
     opacity: 0.8;
 }
 
@@ -149,7 +149,7 @@ tr:hover {
 }
 
 .mercado-noticias::-webkit-scrollbar-thumb {
-    background: #ef18fa;
+    background: #E4E3E5;
     border-radius: 4px;
 }
 
