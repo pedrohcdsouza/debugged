@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debugged</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/galeria.css">
     <
 </head>
 <body>
@@ -19,8 +20,8 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./games.html">Games</a></li>
-                <li><a class='link-active' href="./ia.html">IA</a></li>
                 <li><a href="./seguranca.html">Segurança</a></li>
+                <li><a class='link-active' href="./galeria.html">Galeria</a></li>
                 <li><a href="./mercado.html">Mercado</a></li>
                 <li><a href="./sobre.html">Sobre</a></li>
             </ul>
@@ -30,10 +31,26 @@
         </div>
     </header>
 
-    <main id="news-container">
+    <div class="container">
+        <div class="galeria">
+            <button class="seta seta-esquerda"><</button>
+            
+            <div class="imagem-principal">
+                <img src="../assets/imgs/galeria/1.jpg" alt="Imagem 1" id="imagemAtual">
+            </div>
 
-    </main>
+            <button class="seta seta-direita">></button>
 
+            <div class="miniaturas">
+                <img src="../assets/imgs/galeria/1.jpg" alt="Imagem 1" class="miniatura ativa">
+                <img src="../assets/imgs/galeria/2.avif" alt="Imagem 2" class="miniatura">
+                <img src="../assets/imgs/galeria/3.avif" alt="Imagem 3" class="miniatura">
+                <img src="../assets/imgs/galeria/4.avif" alt="Imagem 4" class="miniatura">
+                <img src="../assets/imgs/galeria/5.jpg" alt="Imagem 5" class="miniatura">
+                <img src="../assets/imgs/galeria/6.jpg" alt="Imagem 6" class="miniatura">
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-left">
             <ul><li><a href="#">Seu portal definitivo para notícias e análises sobre tecnologia, ia, cibersegurança e cultura digital.</a></li></ul>
@@ -48,6 +65,6 @@
         </div>
     </footer>
 
-    <script src="../js/ia.js"></script>
+    <script src="../js/galeria.js"></script>
 </body>
 </html>
