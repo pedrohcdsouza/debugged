@@ -22,7 +22,7 @@ async function fetchNews() {
 
 function displayNews(page) {
     const newsContainer = document.getElementById('news-container');
-    newsContainer.innerHTML = ''; // Limpa o container
+    newsContainer.innerHTML = '';
     
     const start = page * newsPerPage;
     const end = start + newsPerPage;
@@ -64,13 +64,11 @@ function formatDate(dateString) {
 function updateNavigationButtons() {
     const totalPages = Math.ceil(allArticles.length / newsPerPage);
     
-    // Remove navegação existente se houver
     const existingNav = document.querySelector('.news-navigation');
     if (existingNav) {
         existingNav.remove();
     }
     
-    // Adiciona os botões de navegação se houver mais de uma página
     if (totalPages > 1) {
         const navigation = `
             <div class="news-navigation">
@@ -101,11 +99,9 @@ function previousPage() {
 
 document.addEventListener('DOMContentLoaded', fetchNews);
 
-// Adicione no início do seu arquivo, após as variáveis existentes
 const menuIcon = document.querySelector('.menu-icon');
 const nav = document.querySelector('nav');
 
-// Criar e adicionar o overlay
 const overlay = document.createElement('div');
 overlay.className = 'nav-overlay';
 document.body.appendChild(overlay);
@@ -117,14 +113,12 @@ menuIcon.addEventListener('click', (e) => {
     overlay.classList.toggle('active');
 });
 
-// Fechar menu ao clicar no overlay
 overlay.addEventListener('click', () => {
     menuIcon.classList.remove('active');
     nav.classList.remove('active');
     overlay.classList.remove('active');
 });
 
-// Fechar menu ao clicar em um link
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
         menuIcon.classList.remove('active');
@@ -133,7 +127,6 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Fechar menu ao clicar fora
 document.addEventListener('click', (e) => {
     if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
         menuIcon.classList.remove('active');
