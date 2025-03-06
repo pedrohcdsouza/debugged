@@ -1,28 +1,32 @@
-const imagemAtual = document.getElementById('imagemAtual');
-const miniaturas = document.querySelectorAll('.miniatura');
-const setaDireita = document.querySelector('.seta-direita');
-const setaEsquerda = document.querySelector('.seta-esquerda');
-let indiceAtual = 0;
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function atualizarImagem(indice) {
-    imagemAtual.src = miniaturas[indice].src;
-    document.querySelector('.miniatura.ativa').classList.remove('ativa');
-    miniaturas[indice].classList.add('ativa');
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-setaDireita.addEventListener('click', () => {
-    indiceAtual = (indiceAtual + 1) % miniaturas.length;
-    atualizarImagem(indiceAtual);
-});
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-setaEsquerda.addEventListener('click', () => {
-    indiceAtual = (indiceAtual - 1 + miniaturas.length) % miniaturas.length;
-    atualizarImagem(indiceAtual);
-});
+function showSlides(n) {
+    const slides = document.querySelectorAll('.miniatura');
+    const imagemAtual = document.getElementById('imagemAtual');
+    const dots = document.querySelectorAll('.miniatura');
 
-miniaturas.forEach((miniatura, indice) => {
-    miniatura.addEventListener('click', () => {
-        indiceAtual = indice;
-        atualizarImagem(indiceAtual);
-    });
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    imagemAtual.src = slides[slideIndex - 1].src;
+
+    dots.forEach(dot => dot.classList.remove('ativa'));
+
+    dots[slideIndex - 1].classList.add('ativa');
+}
+
+document.querySelector('.seta-direita').addEventListener('click', () => plusSlides(1));
+document.querySelector('.seta-esquerda').addEventListener('click', () => plusSlides(-1));
+
+document.querySelectorAll('.miniatura').forEach((miniatura, indice) => {
+    miniatura.addEventListener('click', () => currentSlide(indice + 1));
 });
