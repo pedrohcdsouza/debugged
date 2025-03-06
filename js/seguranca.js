@@ -2,7 +2,7 @@ let currentPage = 0;
 const newsPerPage = 12;
 let allArticles = [];
 
-const API_URL = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent('https://newsapi.org/v2/everything?q=segurança&language=pt&apiKey=7899286a92104be189c9e4344d3f2b18');
+const API_URL = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent("https://newsapi.org/v2/everything?q=ciber OR cyber OR security&language=pt&sortBy=publishedAt&apiKey=7899286a92104be189c9e4344d3f2b18");
 async function fetchNews() {
     try {
         const response = await fetch(API_URL);
